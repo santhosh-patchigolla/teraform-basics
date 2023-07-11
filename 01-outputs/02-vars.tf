@@ -1,5 +1,5 @@
 variable "sample" {
-    default = "Welcome To Terraform"
+    default = "Santhosh Welcome To Terraform"
 }
 
 output "sample-op" {
