@@ -60,4 +60,4 @@ The need for automation: The need for automation is growing as the complexity an
 I hope this helps! Let me know if you have any other questions.
 
 
-And there is not concept of single cots..
+And there is not concept of single Quots..
