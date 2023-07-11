@@ -58,3 +58,6 @@ Infrastructure is becoming more dynamic: Infrastructure is also becoming more dy
 The need for automation: The need for automation is growing as the complexity and dynamism of infrastructure increases. Terraform provides a way to automate the provisioning and management of infrastructure, which can help to improve efficiency and reduce errors.
 
 I hope this helps! Let me know if you have any other questions.
+
+
+And there is not concept of single cots..
