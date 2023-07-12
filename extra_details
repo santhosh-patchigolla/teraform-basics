@@ -1,7 +1,7 @@
 TO run the terraform first you need to instilize it
 and the below steps are to be performed only undert the terraform file (you should open the file then only you run the below commands)
 >teraform init
-will will check for the required plugins if not will download from the internet
+will will check for the required plugins if not will download from the internet and it will also check the syntax
 
 > terraform plan
 this is going to show whats its going to create ...kind of showing result
