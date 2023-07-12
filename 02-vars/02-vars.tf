@@ -7,7 +7,7 @@ output "sample" {
 }
 
 variable "sample_op" {
-    value = "Welcome to DevOps training"
+    value = "Santhosh Welcome To Terraform training"
 }
 
 output "sample_var_op" {
