@@ -1,1 +1,1 @@
-dv
+city = "Vizag"
