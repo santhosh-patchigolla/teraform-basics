@@ -2,8 +2,12 @@ variable "sample" {
     default = "Santhosh Welcome To Terraform"
 }
 
+output "sample" {
+    default = "Santhosh Welcome To Terraform"
+}
+
 variable "sample_op" {
-    value = var.sample
+    value = "Welcome to DevOps training"
 }
 
 output "sample_var_op" {
