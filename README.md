@@ -61,3 +61,15 @@ I hope this helps! Let me know if you have any other questions.
 
 
 And there is not concept of single Quots..
+
+
+FYI 
+![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/b4f40f0a-f7d6-4c0d-afd1-15d238951776)
+
+![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/389e314c-e6f9-4429-ade5-f285abcbc2e8)
+
+![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/b1c86c5e-903a-4ccf-9a81-02029ea2bce0)
+
+
+
+![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/4e1f82d6-06af-4e8a-a91c-3518300d0e28)
