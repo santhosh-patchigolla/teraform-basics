@@ -1,19 +1,19 @@
 /*
-variable "sample" {
+    variable "sample" {
     default = "Santhosh Welcome To Terraform"
-}
+    }
 
-output "sample" {
+    output "sample" {
     default = "Santhosh Welcome To Terraform training"
-}
+    }
 
-variable "sample_op" {
+    variable "sample_op" {
     value = "Santhosh Welcome To Terraform training"
-}
+    }
 
-output "sample_var_op" {
+    output "sample_var_op" {
     value = "Value of the variable is ${sample_var_op}"
-}
+    }
 
 */
 
