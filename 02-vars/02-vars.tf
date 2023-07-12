@@ -1,21 +1,19 @@
-/*
     variable "sample" {
-    default = "Santhosh Welcome To Terraform"
+        default = "Welcome To Terraform"
     }
 
-    output "sample" {
-    default = "Santhosh Welcome To Terraform training"
+    output "sample_output" {
+        value = var.sample
     }
 
     variable "sample_op" {
-    value = "Santhosh Welcome To Terraform training"
+        default = "Welcome to terraform training"
     }
 
     output "sample_var_op" {
-    value = "Value of the variable is ${sample_var_op}"
+        value = "Value of the variable is ${var.sample_op}"
     }
 
-*/
 
 # variable "test" {}  // Empty Variable
 
