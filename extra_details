@@ -5,6 +5,7 @@ will will check for the required plugins if not will download from the internet 
 
 > terraform plan
 this is going to show whats its going to create ...kind of showing result
+and will see the errors are there, if you have.
 
 
 
