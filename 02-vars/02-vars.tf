@@ -48,5 +48,5 @@ variable "example_map" {
 }
 
 output "example_map_op" {
-    value = "Santhosh is ${var.example_map[education]}  and people use to called him  ${var.example_map[education]} and he completed ${var.example_map[education]}"
+    value = "Santhosh is ${var.example_map["occuption"]}  and people use to called him  ${var.example_map["name"]} and he completed ${var.example_map["education"]}"
 }
