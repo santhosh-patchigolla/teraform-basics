@@ -14,11 +14,11 @@
 #    value = "Value of the variable is ${sample_var_op}"
 #}
 
+# variable "test" {}  // Empty Variable
 
-
-
+# A Variable can be accessed directly by calling it as var.variableName, but if you're accessing in between a set of strings, then you need to enclose them in quotes and it should referred using ${var.VarName}
+# In Terraform there is no concept of Single Quotes. 
 # below is the varible list 
-
 variable "example_list" {
     default = [
         "AWS",
