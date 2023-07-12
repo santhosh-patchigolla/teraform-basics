@@ -3,7 +3,7 @@ variable "sample" {
 }
 
 output "sample" {
-    default = "Santhosh Welcome To Terraform"
+    default = "Santhosh Welcome To Terraform training"
 }
 
 variable "sample_op" {
