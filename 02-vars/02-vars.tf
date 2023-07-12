@@ -24,5 +24,8 @@ variable "example_list" {
 }
 
 output "example_list_op" {
-    value = Welocome to ${var.example_list[1]} with ${var.exaple_list[0]} and this is batch of ${var.exaple_list[3]} and the currenc topic is ${var.example_list[4]}
+    value = "Welcome to ${var.example_list[1]}  with ${var.example_list[0]} Training and this is our batch ${var.example_list[2]} and the current topic is ${var.example_list[4]}"
 }
+
+
+
