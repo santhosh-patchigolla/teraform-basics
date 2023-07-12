@@ -39,3 +39,14 @@ output "example_list_op" {
 
 # map variable is a multiple key value pair is nothing but the map variable
 
+variable "example_map" {
+  default = {
+    "name"      = "santhosh"
+    "occuption" = "Job-holder"
+    "education" =  "degree"
+  }
+}
+
+output "example_map_op" {
+    value = "Santhosh is ${var.example_map[occuption]}  and people use to called him  ${var.example_map[name]} and he completed ${var.example_map[education]}"
+}
