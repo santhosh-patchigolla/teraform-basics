@@ -5,7 +5,8 @@ variable "sample" {
 variable "sample_op" {
     value = var.sample
 }
-output "" {
+
+output "sample_var_op" {
     value = "Value of the variable is ${sample_var_op}"
 }
 
