@@ -1,4 +1,5 @@
 TO run the terraform first you need to instilize it
+and the below steps are to be performed only undert the code file (you should open the file then only you run the below commands)
 >teraform init
 will will check for the required plugins if not will download from the internet
 
