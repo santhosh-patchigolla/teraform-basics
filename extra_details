@@ -1,0 +1,17 @@
+TO run the terraform first you need to instilize it
+>teraform init
+
+> terraform plan
+this is going to show whats its going to create ...kind of showing result
+
+
+
+>terraform apply
+this will create the changes and you have accepted
+
+or 
+as you alredy seen the plan you can go like this 
+terraform apply -auto-approve
+
+
+>terraform destroy
