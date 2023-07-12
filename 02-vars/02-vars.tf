@@ -11,6 +11,11 @@ variable "sample_op" {
     default = "Welcome to terraform training"
 }
 
+output "sample_var_op" {
+    value = 
+    "Value of the variable is ${var.sample_op}"
+}
+
 # below is the varible list 
 
 variable "example_list" {
