@@ -3,6 +3,6 @@ resource "aws_instance" "web" {                 // this will create the ec2 inst
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "HelloWorld-fromterraform"
   }
 }
