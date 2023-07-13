@@ -9,9 +9,8 @@ output "city_name" {                          // using this variable we can prin
 
 variable "state" {}
  
-
 output "state_name" {
-    value = "our country name is ${var.state}"
+    value = "our state name is ${var.state}"
 }
 
 
