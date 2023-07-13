@@ -39,6 +39,9 @@ export TF_VAR_ami=ami-049d8641
 export TF_VAR_alist='[1,2,3]'
 
 Below is the image for attributes and arguments
+FYI 
+when you run the terrafrom pla if you find there is + mens addinf someithing - mens deleting something
+and this  ~ mena changing ex:  ~ "Name" = "HelloWorld" -> "HelloWorld-fromterraform"
 
 
 
