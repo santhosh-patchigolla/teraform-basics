@@ -1,1 +1,1 @@
-countr = Bharath
+country = Bharath
