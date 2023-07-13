@@ -7,12 +7,12 @@ output "city_name" {                          // using this variable we can prin
 }  
 
 
-variable "country" {}
+/* variable "country" {}
  
 
 output "country_name" {
     value = "our country name is ${var.country}"
-}
+} */
 
 
 
