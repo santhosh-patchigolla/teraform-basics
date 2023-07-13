@@ -131,3 +131,7 @@ FYI
 
 
 ![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/4e1f82d6-06af-4e8a-a91c-3518300d0e28)
+
+Below is the image for diff b/w attributes and arguments
+![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/d67b46c2-5a6d-4765-8276-b8cb547f4594)
+
