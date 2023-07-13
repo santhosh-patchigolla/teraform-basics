@@ -18,3 +18,17 @@ terraform apply -auto-approve
 
 
 >terraform destroy
+
+
+# commands
+  <!-- git pull
+  696  terraform plan 
+  697  terraform plan -var-file=dev.tfvars
+  698  git pull
+  699  terraform plan
+  700  git pull
+  701  terraform plan
+  702  git pull
+  703  terraform plan var-file dev.tfvars
+  704  terraform plan var-file=dev.tfvars
+  705  terraform planhistory --> -->
