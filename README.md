@@ -1,5 +1,3 @@
-# teraform-basics
-
 # terraform-basics
 
 In this repository, we are going to place all the needed bascis that are needed to kick start our Terraform Provisioning Capabilites.
@@ -10,14 +8,62 @@ Most of the information in terraform should be referred from `terraform registry
     https://registry.terraform.io/?
 ```
 
-Important Terminolog In Terraform 
+Important Terminology In Terraform 
 
 ```
-    1) Arguments
-    2) Attributes
+    1) Arguments     : Properties of the resource as apart of the resource creation
+    2) Attributes    : Properties of the resource which can be only after the resource creation.
     3) Providers
     4) Modules
 ```
+
+
+# Common Terraform Commands 
+
+```
+    $ terraform init 
+    $ terraform plan
+    $ terraform apply -auto-approve 
+
+```
+
+
+If you want to supply any values of the variable from the command line. 
+```
+
+    $ terraform plan -var VARNAME=value
+    $ terraform apply -auto-approve -var VARNAME=value
+
+```
+
+If you want to supply any values of the variable from the anyother file apart from terraform.tfvars, you need to explicity pass the varaible file name to be used . 
+```
+
+    $ terraform plan -var-file=dev.tfvars
+    $ terraform apply -auto-approve -var-file=dev.tfvars
+
+```
+
+
+### precedence 
+
+```
+    When compared to the values of the variables declared in terraform.tfvars, command line variables will have higher precendence
+
+    -var / -var-file   >  terraform.auto.tfvars  > terraformtfvars > shell variables
+```
+
+
+### Shell Based Variables :
+
+```
+    These are the variables with least priority and this can be supplied by shell using export.
+
+        $ export TF_VAR_varName=value 
+    
+    This is how we can supply the shell based variables
+```
+
 
 In this training, we would be using the latest version of terraform `v1.5.2` ( 10/July/2023 )
 
@@ -58,9 +104,6 @@ Infrastructure is becoming more dynamic: Infrastructure is also becoming more dy
 The need for automation: The need for automation is growing as the complexity and dynamism of infrastructure increases. Terraform provides a way to automate the provisioning and management of infrastructure, which can help to improve efficiency and reduce errors.
 
 I hope this helps! Let me know if you have any other questions.
-
-
-And there is not concept of single Quots..
 
 
 FYI 
