@@ -32,6 +32,13 @@ terraform apply -auto-approve
   703  terraform plan var-file dev.tfvars
   704  terraform plan var-file=dev.tfvars
   705  terraform planhistory --> -->
+
+     $ terraform init     will initilize and download the plugins
+    $ terraform plan        will check the syntax error and show what will be happed if you do the apply command 
+    $ terraform apply -auto-approve   this will do the changes without asking approve
+    terraform destroy -auto-approve   this will do the delete the changes without asking approve
+
+
 we can export the var in CLI usign the below commands
 
 export TF_VAR_region=us-west-1  (region is the empty var given in sample file)and us-west-1 is exported in the cli like  alis comand how we export.
