@@ -51,4 +51,12 @@ when you run the terrafrom pla if you find there is + mens addinf someithing - m
 and this  ~ mena changing ex:  ~ "Name" = "HelloWorld" -> "HelloWorld-fromterraform"
 
 
+Terraform
+tf. state file is created on automaticlly on the teraform code file
+It will check all the setup created by Terraform and if you done any changes manually on the console and you try to apply the Terraform
+Command
+
+Then this terraform will compare the infra and code file and dedected and maunaull changes and revert as code infra (like terraform)
+As it is very important they it will automaticall create another file for backup.
+
 
