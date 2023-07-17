@@ -5,7 +5,7 @@ resource "aws_instance" "app_server" {                 // this will create the e
   vpc_security_group_ids = [aws_security_group.allow_all.id]                           // you can get the security group attributes from the document 
 
   tags = {
-    Name = "HelloWorld-fromterraform"
+    Name = "TerraformServer"
   }
 }
 
