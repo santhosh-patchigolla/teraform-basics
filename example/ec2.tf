@@ -9,7 +9,7 @@ resource "aws_instance" "server" {                 // this will create the ec2 i
   }
 }
 
-output "private_ip" {
+output "private_ip" {                           // using this we can print the output of the privateIP
 value   = aws_instance.server.private_ip
 }
 
