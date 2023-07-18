@@ -24,7 +24,6 @@ Important Terminology In Terraform
     $ terraform init 
     $ terraform plan
     $ terraform apply -auto-approve 
-    terraform destroy -auto-approve
 
 ```
 
@@ -63,6 +62,117 @@ If you want to supply any values of the variable from the anyother file apart fr
         $ export TF_VAR_varName=value 
     
     This is how we can supply the shell based variables
+```
+
+### What exactly happens when you run `terraform plan`  ? 
+
+```
+    When you run a terraform plan,  terraform is going to check the CURRENT STATE OF THE INFRASTRUCTURE and then it validates with what's there in the code that you're suppling against the terraform state file.
+
+    If there are any changes ( how it comes to know ? Becuase of the above validation) , then terraform shows that to you during plan output.
+
+    If you wan to want those changes, then you need to a `terraform apply` , when you do a terraform apply, your state will also be updated
+
+    Eventually, your manual changes will be wiped off.
+```
+
+### Terraform has created some infrasturcure and then you manually went and updated the changes of the INFRA using console. Now if you Terraform Apply with the same old code , what will happen ???
+
+```
+    For Terraform, whatever is there in the CODE and as per that PLAN will be generated and for terraform PLAN is the source of truth, which means when you do a `terraform apply` , all your manual changes will be wiped off.
+
+    99% of the times, a good setup will ensure you as a user won't be having write access on the console.
+    Only the IAM Role, which we use to configure JENKINS will only have right access.
+
+```
+
+### All the operations are supposed to go by terraform only, what all ?
+
+```
+    READ
+    WRITE
+    UPDATE
+    DELETE
+```
+
+
+### If statefile is that much important, what will happen ?
+
+```
+
+STATEFILE is going to capture everything that was created by terrform and if you lost that, you lost all your changes or tracking made by terraform and it's very very crucial so you need to ensure you need to have quite strong strategy to save it and organize it.
+
+```
+
+### Where should I store my statefile ?
+
+```
+In a team based environment, you should never save your statefile locally and this is to ensure to collaborate in the team based
+environment.
+
+It's always recommened to save state on the top of available REMOTE BACKENDS
+```
+
+### What is a backend ?
+
+```
+Backend is a place, where we are going to save our statefile. It can also be local ( means state will be saved locally : Which is not a recommended solution)
+
+Ref : https://developer.hashicorp.com/terraform/language/settings/backends/configuration
+```
+
+### Remote Backend :
+
+```
+Type of remote backend is 100% based on the type of selected Remote Backend.
+```
+
+
+### What all needs to be considered when dealing with REMOTE Statefiles on AWS S3 Bucket as a part of the security measure.
+
+```
+1) Ensure no one has the ability or capability to delete that S3 Bucket ( Object Storage Service on AWS )
+2) Objection Versioning on S3 should be enabled to capture all the changes along with their versions ( Just like GIT )
+3) Ensure encryption is enabled by your own KMS Key ( either symmeric or asymmetric )
+
+```
+
+### Backend :
+
+```
+The place where you're storing your information is referred as backend and there are 2 types of backends :
+    1) Local 
+    2) Remote ( Multiple Varieties Of Remote Backend are Offered and this is recommended appraoch)
+```
+
+
+### What is a Module In Terraform and why do we need Modules in Terraform ?
+
+```
+Module is like a folder with the groups of resources to be created.
+
+```
+
+**Advantages of Using Terraform Modules**
+```
+By using modules, you can significantly reduce the amount of code you need to write and maintain. Rather than repeating the same code, you can create a module and reference it multiple times, passing different parameters.
+```
+
+In organizations, 100% of the infra will be built using TERRAFORM Only and manual changes are 100% strictly not allowed.
+
+## Challenges with modules.
+
+```
+    1) If we are using modules, shareing the outputs and referencing the created resource attirbutes accorss the modules is not a direct task
+    2) Passing outputs from module to module is not a direct process.
+    3) If you want to send the outputs of Module-A to Module-B, it will never be a direct processs. Module-A has to pass the output information to root-module and then root-module has to pass the information to to the Module-B
+```
+
+
+### Data Source: 
+
+```
+This helps in extracting the information of the already existing resources and using this we can fetch the information of any existing resource.
 ```
 
 
@@ -105,34 +215,3 @@ Infrastructure is becoming more dynamic: Infrastructure is also becoming more dy
 The need for automation: The need for automation is growing as the complexity and dynamism of infrastructure increases. Terraform provides a way to automate the provisioning and management of infrastructure, which can help to improve efficiency and reduce errors.
 
 I hope this helps! Let me know if you have any other questions.
-
-
-FYI 
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/b4f40f0a-f7d6-4c0d-afd1-15d238951776)
-
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/389e314c-e6f9-4429-ade5-f285abcbc2e8)
-
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/b1c86c5e-903a-4ccf-9a81-02029ea2bce0)
-
-
-
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/4e1f82d6-06af-4e8a-a91c-3518300d0e28)
-
-
-And there is not concept of single Quots..
-
-
-FYI 
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/b4f40f0a-f7d6-4c0d-afd1-15d238951776)
-
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/389e314c-e6f9-4429-ade5-f285abcbc2e8)
-
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/b1c86c5e-903a-4ccf-9a81-02029ea2bce0)
-
-
-
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/4e1f82d6-06af-4e8a-a91c-3518300d0e28)
-
-Below is the image for diff b/w attributes and arguments
-![image](https://github.com/santhosh-patchigolla/teraform-basics/assets/53848645/d67b46c2-5a6d-4765-8276-b8cb547f4594)
-
