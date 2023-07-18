@@ -21,3 +21,8 @@ resource "aws_security_group" "allows_all" {
     Name = "allows_tls"
   }
 }
+
+# Step 1 : Declaring the output that we wish to pass to the root Module
+output "sgid" { 
+  value = aws_security_group.allows_all.id   // this attributes can g=be get from the document
+}

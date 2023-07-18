@@ -2,12 +2,15 @@
 
 
 
+# root Module is a place where we ecute the terraform command
+
 module "ec2" {
   source = "./ec2"
+  sg     = module.sg.sdid
 }
 
 module "sg" {
-  source = "./sg"
+  source = "./sg"      // path of the sg 
 }
 
 
