@@ -13,7 +13,6 @@ module "sg" {
   source = "./sg"      // path of the sg 
 }
 
-
 output "public_ip_address" {
   value  = module.ec2.public_ip                          # This is going to fetch the declared output and prints
 }

@@ -6,3 +6,7 @@ resource "aws_instance" "sample" {                 // this will create the ec2 i
 }
 
 variable "sg" {}
+
+output "public_ip"{
+    value   = aws_instance.sample.public_ip
+}
