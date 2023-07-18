@@ -2,6 +2,8 @@
 
 
 
+
+
 # root Module is a place where we ecute the terraform command
 
 module "ec2" {
