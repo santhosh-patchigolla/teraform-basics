@@ -24,7 +24,7 @@ resource "aws_instance" "samplee" {                 // this will create the ec2 
 variable "sg" {}
 
 output "public_ip"{
-    value   = aws_instance.sample.public_ip
+    value   = aws_instance.samplee.public_ip
 }
 
 
