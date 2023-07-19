@@ -1,11 +1,11 @@
 resource "aws_security_group" "allows_all" {
   name        = "allows_tls"
-  description = "Allows TLS inbound traffic"
+  description = "Allows SSH inbound traffic"
 
   ingress {
-    description = "TLS from VPC"
-    from_port   = 443
-    to_port     = 443
+    description = "SSH from VPC"
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
