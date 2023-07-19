@@ -16,7 +16,7 @@ resource "aws_instance" "sample" {                 // this will create the ec2 i
   }    
   
     inline = [
-      "ansible-pull -U https://github.com/santhosh-patchigolla/ansible.git playbookName.yml -e ENV=dev -e COMPONENT=mongodb roboshop-pull.yaml",      
+      "ansible-pull -U https://github.com/santhosh-patchigolla/ansible.git playbookName.yml -e ENV=dev -e COMPONENT=mongodb roboshop-pull.yml",      
     ]
   }
 }
