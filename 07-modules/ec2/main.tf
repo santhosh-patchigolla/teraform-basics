@@ -4,7 +4,7 @@ resource "aws_instance" "sample" {                 // this will create the ec2 i
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.sg]     
   tags = {
-    Name = "Linux_server"
+    Name = "Linux"
   }                        // you can get the security group attributes from the document 
 }
 
