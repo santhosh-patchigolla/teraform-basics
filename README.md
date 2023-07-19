@@ -175,6 +175,43 @@ In organizations, 100% of the infra will be built using TERRAFORM Only and manua
 This helps in extracting the information of the already existing resources and using this we can fetch the information of any existing resource.
 ```
 
+### Provisioners In Terraform 
+
+```
+Provisioners are used to execure actions on the local machine or on a remote machine in order to prepare servers or other infrastructure objects for service.
+
+    1) Remote Provisioners
+    2) Local Provisioners
+    3) File Provisioners
+
+```
+
+***NOTE***
+```
+Provisioners are by default create-time, which means they will only be executed during the infra creation only and it's wont be run again.
+We also have comething called destry-time provisoioners, which means they will only be executed during the infra destroy only
+
+But using triggers, we can control when they can triggered.
+```
+
+
+***Points To Be Noted***
+
+```
+1) Provisioners can be placed within the resource or outside the resource as well.
+
+2) If your provisioner runs inside the infra, in this case even if your provisioner fails because of any reason, terraform records this particular event as failure and marks it as tained.
+
+3) When a resource is marked as tainted in terraform state file, this particular resource will be subjected to recreation when you do a  `terraform apply` in the next run.
+
+4) If your provisioner runs outside the infra, in this case even if your provisioner fails because of any reason, terraform records this particular event as failure and marks it as tained against that particular provisioner only. In this case, your resource won't be subjected to failure.
+
+
+PS : Provisioner can only run inside a resource, but we have some dummy resources like `NULL RESOURCR` to host these kind of activities.
+```
+
+
+
 
 In this training, we would be using the latest version of terraform `v1.5.2` ( 10/July/2023 )
 
