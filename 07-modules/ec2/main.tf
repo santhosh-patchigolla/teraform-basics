@@ -5,8 +5,6 @@ resource "aws_instance" "sample" {                 // this will create the ec2 i
   vpc_security_group_ids = [var.sg]                           // you can get the security group attributes from the document 
 }
 
-
-
 variable "sg" {}
 
 output "public_ip"{
