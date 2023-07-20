@@ -17,7 +17,7 @@ resource "aws_spot_instance_request" "spot_worker" {
       type     = "ssh"
       user     = "centos"
       password = "DevOps321"
-      host     = self.private_ip   # as we dont know the IP because the server hasn't created yet we can use host section refer from doc
+      host     = self.private_ip   # Here we dont know the IP because the server hasn't created yet we can use host section refer from doc
     }    
   
     inline = [
