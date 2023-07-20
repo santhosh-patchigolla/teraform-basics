@@ -12,16 +12,16 @@ resource "aws_spot_instance_request" "spot_worker" {
 # This will excute on the top of the remote server once it got created
   provisioner "remote-exec" {
 
-    # Below is the connection block where we can pass the creds of the remote server to tun the playbook
+    # connection block establishes connection to this
     connection {
       type     = "ssh"
       user     = "centos"
       password = "DevOps321"
-      host     = self.private_ip   # Here we dont know the IP because the server hasn't created yet we can use host section refer from doc
-    }    
-  
+      host     = self.private_ip             # aws_instance.sample.private_ip : Use this only if your provisioner is outside the resource.
+    }
+
     inline = [
-      "ansible-pull -U https://github.com/santhosh-patchigolla/ansible.git -e ROOT_PASSWORD=RoboShop@1 -e ENV=dev -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION} roboshop-pull.yml",               // Given var.appversion to declare the version over the CLI
+      "ansible-pull -U https://santhosh-patchigolla/ansible.git -e ROOT_PASSWORD=RoboShop@1 -e ENV=dev -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION} roboshop-pull.yml"
     ]
   }
 }
