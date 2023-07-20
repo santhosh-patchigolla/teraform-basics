@@ -21,7 +21,7 @@ resource "aws_spot_instance_request" "spot_worker" {
     }
 
     inline = [
-      "ansible-pull -U https://santhosh-patchigolla/ansible.git -e ROOT_PASSWORD=RoboShop@1 -e ENV=dev -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION} roboshop-pull.yml"
+      "ansible-pull -U https://github.com/b54-clouddevops/ansible.git -e ROOT_PASSWORD=RoboShop@1 -e ENV=dev -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION} roboshop-pull.yml"
     ]
   }
 }
